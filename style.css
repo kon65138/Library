@@ -80,3 +80,7 @@ input, select, #newB {
     border-radius: 5px;
     padding: 1rem;
 }
+
+.dltButton {
+    margin: 2rem 1rem;
+}
