@@ -10,44 +10,54 @@ body {
     margin: 0;
     height: 100%;
     display: grid;
-    grid-template-columns: 7fr 3fr;
     grid-template-rows: 1.2fr 8.8fr;
 }
 
 .header {
     background-color:#38bdf8;
-    grid-column: 1/3;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 0 1rem 0 1rem;
+    position: relative;
 }
 
 .title {
-    flex: 0 1 1;
+    flex: 1;
     display: flex;
 }
 
 .cred {
+    margin-left: 2rem;
     flex: 0 1 1;
     display:flex;
 }
 
-.sidebar {
+sidebar {
     background-color:#bae6fd;
     grid-row: 2/3;
-    grid-column: 2/3;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-form {
-    display: flex;
+.form-popup {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+#newBook {
+    display: none;
     flex-direction: column;
     gap: 5rem;
     flex: 1;
+    max-width: 500px;
+    padding: 1rem;
+    background-color: white;
 }
 
 .inptWrapr {
@@ -59,16 +69,15 @@ label {
     margin-bottom: 2px;
 }
 
-input, select, #newB {
+input, select, #newB, #cancelB{
     width: 90%;
 }
 
 .mainContent {
     background-color:#e0f2fe;
     grid-row:2/3;
-    grid-column: 1/2;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     padding: 1rem;
     gap: 1rem;

@@ -9,35 +9,37 @@
 <body>
     <div class="header">
         <h1 class="title">Library</h1>
+        <button class="openForm" onclick="openForm()">add book</button> 
+        <div class="form-popup">
+            <form id="newBook" action="/" method="/" onsubmit="addBookToLibrary()">
+                <div class="inptWrapr">
+                    <label for="name">What is the name of the book?</label>
+                    <input type="text" id="bName" name="name"required>
+                    <span></span>
+                </div>
+                <div class="inptWrapr">
+                    <label for="author">Who is the author of the book?</label>
+                    <input type="text" id="bAuthor" name="author" required>
+                    <span></span>
+                </div>
+                <div class="inptWrapr">
+                    <label for="pages">How many pages does the book have?</label>
+                    <input type="text" id="bPages" name="pages" pattern="^[0-9]+$" required>
+                    <span></span>
+                </div>
+                <div class="inptWrapr">
+                    <label for="read">Have the read the book?</label>
+                    <select name="read" id="bRead">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                    <span></span>
+                </div>
+                <button id="newB" type="submit">Add new book</button>
+                <button id="cancelB" type="button" class="closeForm" onclick="closeForm()">cancel</button>
+            </form>
+        </div>
         <div class="cred">created by <a href="https://github.com/kon65138">kon65138</a></div>
-    </div>
-    <div class="sidebar">
-        <form id="newBook" action="/" method="/">
-            <div class="inptWrapr">
-                <label for="name">What is the name of the book?</label>
-                <input type="text" id="bName" name="name">
-                <span></span>
-            </div>
-            <div class="inptWrapr">
-                <label for="author">Who is the author of the book?</label>
-                <input type="text" id="bAuthor" name="author">
-                <span></span>
-            </div>
-            <div class="inptWrapr">
-                <label for="pages">How many pages does the book have?</label>
-                <input type="text" id="bPages" name="pages" pattern="^[0-9]+$">
-                <span></span>
-            </div>
-            <div class="inptWrapr">
-                <label for="read">Have the read the book?</label>
-                <select name="read" id="bRead">
-                    <option value="true">Yes</option>
-                    <option value="false">No</option>
-                </select>
-                <span></span>
-            </div>
-            <button id="newB" type="none">Add new book</button>
-        </form>
     </div>
     <div class="mainContent">
     </div>
