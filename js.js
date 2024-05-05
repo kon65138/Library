@@ -86,10 +86,10 @@ function display() {
         card.appendChild(dltButton);
 
         readButton.addEventListener("click", () => {
-            if (myLibrary[book].read == true) {
-                myLibrary[book].read = false;
-            } else if (myLibrary[book].read == false) {
-                myLibrary[book].read = true;
+            if (myLibrary[book].read == "yes") {
+                myLibrary[book].read = "no";
+            } else if (myLibrary[book].read == "no") {
+                myLibrary[book].read = "yes";
             }
             display();
         } )
