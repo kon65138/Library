@@ -18,12 +18,14 @@ const myLibrary = [{
     libraryNo: 1,
 }];
 
-function Book(name, pages, author, read, libraryNo) {
-    this.bookName = name;
-    this.pages = pages;
-    this.author = author;
-    this.read = read;
-    this.libraryNo = libraryNo;
+class Book {
+    constructor (name, pages, author, read, libraryNo) {
+        this.bookName = name;
+        this.pages = pages;
+        this.author = author;
+        this.read = read;
+        this.libraryNo = libraryNo;
+    }
 }
 
 function openForm() {
